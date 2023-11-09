@@ -1,8 +1,9 @@
 import * as React from "react";
 import styles from "./styles.module.css";
+import Header from "../Header";
 
 function App() {
-  return <div>App Component</div>;
+  return (<Header />)
 }
 
 export const test = "aaa";

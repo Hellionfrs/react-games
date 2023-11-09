@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  background-color: #eff4ff;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+  margin-inline: auto;
+  max-width: 80rem;
+  height: 4rem;
+}
+
+.title {
+  font-family: var(--nunito);
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+
+.language-container {
+  display: flex;
+  gap: 0.25rem;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,9 +1,15 @@
 import * as React from "react";
 import styles from "./styles.module.css";
 import Header from "../Header";
+import Main from "../Main";
 
 function App() {
-  return (<Header />)
+  return (
+    <>
+      <Header />
+      <Main />
+    </>
+  );
 }
 
 export const test = "aaa";

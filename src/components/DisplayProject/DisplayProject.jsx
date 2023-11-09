@@ -1,8 +1,15 @@
 import Labels from "../Labels";
 import styles from "./DisplayProject.module.css";
+import { ProjectContext } from "../../contexts/ProjectContext";
+import * as React from "react";
 function DisplayProject({ img, title, labels }) {
+  const {project, setProject} = React.useContext(ProjectContext)
+  function handleProject() {
+    setProject(title)
+    console.log(project)
+  }
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={handleProject}>
       <div className={styles.head}>
         <img src={img} alt="" />
       </div>

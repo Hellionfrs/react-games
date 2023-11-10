@@ -4,7 +4,7 @@
   gap: 1rem;
 }
 
-.player {
+.status {
 
   color: #0F172A;
   text-align: center;
@@ -15,7 +15,12 @@
   line-height: 2.5rem; /* 111.111% */
 }
 
+.row {
+  height: 5.625rem;
+}
 .board {
   display: flex;
   flex-direction: column;
+  width: 16.875rem;
+  height: 16.875rem;
 }

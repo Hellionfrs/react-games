@@ -21,7 +21,7 @@ function Pokemon() {
   }, [username]);
 
   useEffect(() => {
-    if (getFavoritos) {
+    if (getFavoritos && username) {
       fetch(apiUrl)
         .then((result) => result.json())
         .then((result) => setFavoritos(result.data));

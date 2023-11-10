@@ -1,0 +1,21 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.player {
+
+  color: #0F172A;
+  text-align: center;
+  font-family: var(--nunito);
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.5rem; /* 111.111% */
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+}

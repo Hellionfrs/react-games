@@ -1,7 +1,11 @@
+import GameBoard from "../GameBoard";
+import GameInfo from "../GameInfo/GameInfo";
+import styles from "./TicTacToe.module.css"
 function TicTacToe() {
   return (
-    <section>
-      <div>tictactoe</div>
+    <section className={styles.container}>
+      <GameBoard />
+      <GameInfo />
     </section>
   );
 }

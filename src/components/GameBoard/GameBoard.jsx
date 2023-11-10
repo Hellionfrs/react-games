@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Square from "../Square";
 import styles from "./GameBoard.module.css";
+import { I18nContext } from "../../locales/I18nContext";
 function GameBoard({ xIsNext, squares, onPlay }) {
-
+  const {t} = useContext(I18nContext)
   function handleClick(i) {
     if (squares[i] || calculateWinner(squares).winner) return;
     const nextSquares = squares.slice();
@@ -19,9 +20,9 @@ function GameBoard({ xIsNext, squares, onPlay }) {
   console.log(calculateWinner(squares))
   let status;
   if (results.winner) {
-    status = "Winner " + results.winner;
+    status = t("won-game")+ " " + results.winner;
   } else {
-    status = "Next player: " + (xIsNext ? "X" : "O");
+    status = `${t("next-player")}: ` + (xIsNext ? "X" : "O");
   }
 
   return (

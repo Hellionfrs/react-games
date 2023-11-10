@@ -8,8 +8,8 @@ function Header() {
       <div className={styles.header}>
         <h1 className={styles.title}>React Showcase</h1>
         <div className={styles["language-container"]}>
-          <Language src={spanish} alt="spanish" />
-          <Language src={english} alt="english" />
+          <Language id="es" src={spanish} alt="spanish" />
+          <Language id="en" src={english} alt="english" />
         </div>
       </div>
     </header>

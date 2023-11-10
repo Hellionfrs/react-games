@@ -18,6 +18,11 @@ function TicTacToe() {
     setCurrentMove(nextHistory.length - 1);
   }
 
+  function handleReset() {
+    setHistory([Array(9).fill(null)])
+    setCurrentMove(0)
+    
+  }
   function jumpTo(nextMove) {
     //TODO
     setCurrentMove(nextMove);
@@ -43,7 +48,7 @@ function TicTacToe() {
         squares={currentSquares}
         onPlay={handlePlay}
       />
-      <GameInfo moves={moves} />
+      <GameInfo moves={moves} handleReset={handleReset} />
     </section>
   );
 }

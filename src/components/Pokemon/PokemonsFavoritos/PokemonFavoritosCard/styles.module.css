@@ -17,7 +17,7 @@
 }
 .name {
   color: #0f172a;
-
+  text-transform: capitalize;
   text-align: center;
   font-family: Nunito;
   font-size: 20px;

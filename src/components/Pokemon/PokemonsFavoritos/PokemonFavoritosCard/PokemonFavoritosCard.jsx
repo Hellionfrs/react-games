@@ -1,9 +1,12 @@
 import Type from "../Type";
 import styles from "./styles.module.css";
-function PokemonsFavoritosCard({ pokemon }) {
+function PokemonsFavoritosCard({ pokemon, onCardClick }) {
+  const handleCardClick = () => {
+    onCardClick(pokemon.id);
+  };
   let newId = pokemon.id.toString().padStart(3, "0")
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={handleCardClick}>
       <div className={styles.title}>
         <h1 className={styles.name}>{pokemon.name}</h1>
         <span className={styles.id}>{`#${newId}`}</span>

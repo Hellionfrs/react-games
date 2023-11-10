@@ -6,20 +6,51 @@ import { useEffect, useState } from "react";
 import usePokemonSearch from "./usePokemonSearch.hook";
 import useAddFavorito from "./useAddFavotitos.hook";
 
-function PokemonResult({ username, setGetFavoritos }) {
+function PokemonResult({
+  username,
+  setGetFavoritos,
+  removeFromFavorites,
+  favoritos,
+  selectedPokemonId,
+}) {
   const [pokemonName, setPokemonName] = useState("");
   const { pokemon, setIsSearching } = usePokemonSearch(pokemonName);
   const { result, addFavorito } = useAddFavorito(pokemon, username);
 
-  function addFavoriteHandler() {
-    addFavorito(pokemon);
+  // function addFavoriteHandler() {
+  //   addFavorito(pokemon);
+  // }
+
+  function addOrRemoveFavoriteHandler() {
+    if (isPokemonInFavorites()) {
+      removeFromFavorites(pokemon.id);
+    } else {
+      addFavorito(pokemon);
+    }
   }
+
+  const isPokemonInFavorites = () => {
+    return favoritos.some((fav) => fav.id === pokemon.id);
+  };
 
   useEffect(() => {
     if (result) {
       setGetFavoritos(true);
     }
   }, [result, setGetFavoritos]);
+
+  useEffect(() => {
+    if (selectedPokemonId !== null) {
+      // Buscar el Pokémon seleccionado por ID y establecer el nombre en el campo de búsqueda
+      const selectedPokemon = favoritos.find(
+        (fav) => fav.id === selectedPokemonId
+      );
+      if (selectedPokemon) {
+        setPokemonName(selectedPokemon.name);
+        setIsSearching(true); // Para realizar la búsqueda automáticamente al seleccionar un Pokémon
+      }
+    }
+  }, [selectedPokemonId, favoritos, setIsSearching]);
 
   return (
     <div className={styles["busqueda-container"]}>
@@ -79,11 +110,13 @@ function PokemonResult({ username, setGetFavoritos }) {
           <div>
             <button
               className={styles["favorito-btn"]}
-              onClick={addFavoriteHandler}
+              onClick={addOrRemoveFavoriteHandler}
             >
               {" "}
               <img src={estrella} />
-              Add to Favorites
+              {isPokemonInFavorites()
+                ? "Quitar de Favoritos"
+                : "Agregar a Favoritos"}
             </button>
           </div>
         </>

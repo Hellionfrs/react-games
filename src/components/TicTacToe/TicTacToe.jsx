@@ -2,6 +2,7 @@ import GameBoard from "../GameBoard";
 import GameInfo from "../GameInfo/GameInfo";
 import styles from "./TicTacToe.module.css";
 import { useState } from "react";
+
 function TicTacToe() {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [currentMove, setCurrentMove] = useState(0);
@@ -34,6 +35,7 @@ function TicTacToe() {
     );
   });
   return (
+
     <section className={styles.container}>
       <GameBoard
         xIsNext={xIsNext}
@@ -41,6 +43,7 @@ function TicTacToe() {
         onPlay={handlePlay}
       />
       <GameInfo moves={moves} />
+
     </section>
   );
 }

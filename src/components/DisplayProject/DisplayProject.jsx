@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Labels from "../Labels";
 import styles from "./DisplayProject.module.css";
 import { ProjectContext } from "../../contexts/ProjectContext";

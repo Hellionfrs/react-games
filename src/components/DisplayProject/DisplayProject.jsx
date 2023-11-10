@@ -7,7 +7,7 @@ function DisplayProject({ img, title, labels }) {
   const {project, setProject} = React.useContext(ProjectContext)
   function handleProject() {
     setProject(title)
-    console.log(project)
+    console.log(title)
   }
   return (
     <div className={styles.card} onClick={handleProject}>

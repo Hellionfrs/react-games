@@ -1,3 +1,19 @@
-.tictactoe{
+.tictactoe {
   background-color: aqua;
+}
+
+.ticTacToe-container {
+  background-color: aqua;
+  padding: 4rem 1rem 0 0;
+}
+
+.frame15 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.frame32 {
+  display: flex;
 }

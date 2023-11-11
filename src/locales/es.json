@@ -14,5 +14,24 @@
   "Favorites":"Favoritos",
   "Exit":"Salir",
   "Reset":"Reiniciar",
-  "Go to": "Ir a"
+  "Go to": "Ir a",
+  "fighting" : "peleador",
+  "flying" : "volador",
+  "ground" : "tierra",
+  "poison" : "veneno",
+  "rock" : "roca",
+  "bug" : "insecto",
+  "ghost" : "fantasma",
+  "steel" : "acero",
+  "fire" : "fuego",
+  "water" : "agua",
+  "grass" : "hierba",
+  "electric" : "electrico",
+  "psychic" : "psíquico",
+  "ice" : "hielo",
+  "dark" : "siniestro",
+  "fairy" : "hada"
+
+
+
 }

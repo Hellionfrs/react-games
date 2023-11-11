@@ -5,23 +5,38 @@ import styles from "./TicTacToe.module.css";
 import { useState, useContext } from "react";
 
 function TicTacToe() {
-  const [history, setHistory] = useState([Array(9).fill(null)]);
-  const [currentMove, setCurrentMove] = useState(0);
+  
+  const [history, setHistory] = useState(() => {
+    const historyLocal = localStorage.getItem("history")
+    if (historyLocal) return JSON.parse(historyLocal)
+    return [Array(9).fill(null)]
+  });
+  console.log("history en reder",history);
+  const [currentMove, setCurrentMove] = useState(() => {
+    const moveLocal = localStorage.getItem("move")
+    if (moveLocal) return JSON.parse(moveLocal)
+    return 0
+  });
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
   const { t } = useContext(I18nContext);
   // console.log(t);
-  console.log(currentMove)
+  console.log(currentMove);
   function handlePlay(nextSquares) {
     //TODO
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
     setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);
+    // console.log("nextHistory",nextHistory)
+    localStorage.setItem("history", JSON.stringify(nextHistory))
+    localStorage.setItem("move", JSON.stringify(nextHistory.length - 1))
   }
 
   function handleReset() {
     setHistory([Array(9).fill(null)]);
     setCurrentMove(0);
+    localStorage.setItem("history", JSON.stringify([Array(9).fill(null)]))
+    localStorage.setItem("move", JSON.stringify(0))
   }
   function jumpTo(nextMove) {
     //TODO

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Square.module.css";
 export default function Square({ id, value, onSquareClick, winners }) {
-  console.log(winners)
   let className = `${styles.square}`;
     
   if(winners && winners.includes(id)) {

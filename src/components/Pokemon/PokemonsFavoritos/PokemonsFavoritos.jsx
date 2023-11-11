@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 import PokemonsFavoritosCard from "./PokemonFavoritosCard/PokemonFavoritosCard";
 
-function PokemonsFavoritos({ onExit, favoritos }) {
+function PokemonsFavoritos({ onExit, favoritos, onCardClick }) {
   return (
     <div className={styles.favoritosContainer}>
       <div className={styles.titleContainer}>
@@ -13,7 +13,11 @@ function PokemonsFavoritos({ onExit, favoritos }) {
 
       <div className={styles.pokemonFavoritosCards}>
         {favoritos.map((pokemon, key) => (
-          <PokemonsFavoritosCard pokemon={pokemon} key={key} />
+          <PokemonsFavoritosCard
+            pokemon={pokemon}
+            key={key}
+            onCardClick={onCardClick}
+          />
         ))}
       </div>
     </div>

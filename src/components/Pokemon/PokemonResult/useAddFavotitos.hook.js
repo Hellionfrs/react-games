@@ -16,7 +16,7 @@ const useAddFavorito = (pokemon, username) => {
         body: JSON.stringify({
           id: pokemon.id,
           name: pokemon.name,
-          types: pokemon.types.map((type) => type.type.name), 
+          types: pokemon.types.map((type) => type.type.name),
           avatarUrl: pokemon.sprites.other.dream_world.front_default,
         }),
       })

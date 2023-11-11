@@ -4,5 +4,14 @@
   "move": "Move",
   "reset-button": "Reset",
   "won-game": "Winner",
-  "tied-game": "Tied Game"
+  "tied-game": "Tied Game",
+  "Enter":"Enter",
+  "username":"username",
+  "There isn't pokemon": "No pokemons yet",
+  "Add favorite": "Add favorite",
+  "Remove pokemon": "Remove pokemon",
+  "Search":"Search",
+  "Favorites":"Favorites",
+  "Exit":"Exit"
+  
 }

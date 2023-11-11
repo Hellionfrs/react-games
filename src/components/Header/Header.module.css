@@ -23,6 +23,21 @@
 .language-container {
   display: flex;
   gap: 0.25rem;
-  justify-content: center;
+  min-width: 17.0625rem;
+  justify-content: flex-end;
+  /* justify-content: center; */
   align-items: center;
+}
+
+.project {
+  padding: 0.5rem 1rem;
+  border-radius: 1.25rem;
+  border: 1px solid #1D58D8; 
+  
+  color: #1D58D8;
+  font-family: var(--nunito);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem; /* 100% */
 }

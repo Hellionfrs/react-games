@@ -6,15 +6,17 @@ import React from "react";
 import { ProjectContext } from "../../contexts/ProjectContext";
 
 function Header() {
-  const {project, setProject} = React.useContext(ProjectContext)
+  const { project, setProject } = React.useContext(ProjectContext);
   function handleIndex() {
-    setProject(null)
+    setProject(null);
   }
   return (
     <header className={styles.container}>
       <div className={styles.header}>
-        <h1 className={styles.title} onClick={handleIndex}>React Showcase</h1>
-        <span>{project}</span>
+        <h1 className={styles.title} onClick={handleIndex}>
+          React Showcase
+        </h1>
+        {project && <span className={styles.project}>{project}</span>}
         <div className={styles["language-container"]}>
           <Language id="es" src={spanish} alt="spanish" />
           <Language id="en" src={english} alt="english" />

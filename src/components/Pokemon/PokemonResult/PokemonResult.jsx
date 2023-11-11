@@ -118,8 +118,8 @@ function PokemonResult({
               {" "}
               <img src={estrella} />
               {isPokemonInFavorites()
-                ? "Quitar de Favoritos"
-                : "Agregar a Favoritos"}
+                ? t("Remove pokemon")
+                : t("Add favorite")}
             </button>
           </div>
         </>

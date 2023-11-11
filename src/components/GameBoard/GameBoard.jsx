@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import Square from "../Square";
 import styles from "./GameBoard.module.css";
 import { I18nContext } from "../../locales/I18nContext";
-function GameBoard({ xIsNext, squares, onPlay }) {
+function GameBoard({ xIsNext, squares, onPlay, move }) {
   const {t} = useContext(I18nContext)
   function handleClick(i) {
     if (squares[i] || calculateWinner(squares).winner) return;
@@ -14,15 +14,16 @@ function GameBoard({ xIsNext, squares, onPlay }) {
       nextSquares[i] = "O";
     }
     onPlay(nextSquares);
-    console.log(squares);
   }
   const results = calculateWinner(squares);
-  console.log(calculateWinner(squares))
   let status;
   if (results.winner) {
     status = t("won-game")+ " " + results.winner;
   } else {
     status = `${t("next-player")}: ` + (xIsNext ? "X" : "O");
+    if (move === 9 ) {
+      status = t("tied-game")
+    }
   }
 
   return (

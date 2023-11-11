@@ -10,7 +10,7 @@ function TicTacToe() {
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
   const { t } = useContext(I18nContext);
-  console.log(t)
+  console.log(t);
   function handlePlay(nextSquares) {
     //TODO
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
@@ -19,9 +19,8 @@ function TicTacToe() {
   }
 
   function handleReset() {
-    setHistory([Array(9).fill(null)])
-    setCurrentMove(0)
-    
+    setHistory([Array(9).fill(null)]);
+    setCurrentMove(0);
   }
   function jumpTo(nextMove) {
     //TODO
@@ -42,14 +41,16 @@ function TicTacToe() {
     );
   });
   return (
-    <section className={styles.container}>
-      <GameBoard
-        xIsNext={xIsNext}
-        squares={currentSquares}
-        onPlay={handlePlay}
-      />
-      <GameInfo moves={moves} handleReset={handleReset} />
-    </section>
+    <div className={styles.box}>
+      <section className={styles.container}>
+        <GameBoard
+          xIsNext={xIsNext}
+          squares={currentSquares}
+          onPlay={handlePlay}
+        />
+        <GameInfo moves={moves} handleReset={handleReset} />
+      </section>
+    </div>
   );
 }
 

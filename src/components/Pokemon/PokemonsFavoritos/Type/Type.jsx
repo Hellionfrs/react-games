@@ -1,10 +1,12 @@
 import styles from "./Type.module.css";
+import { I18nContext } from "../../../../locales/I18nContext";
+import { useContext } from "react";
 function Type({ type, id }) {
+  const {t} = useContext(I18nContext)
   let className = `${styles["base-type"]} ${styles[type]}`;
-  let newType =  type.charAt(0).toUpperCase() + type.slice(1)
   return (
     <span className={className} id={id}>
-      {newType}
+      {t(type)}
     </span>
   );
 }

@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import Type from "../Type";
 import styles from "./styles.module.css";
+
 function PokemonsFavoritosCard({ pokemon, onCardClick }) {
+  
   const handleCardClick = () => {
     onCardClick(pokemon.id);
   };

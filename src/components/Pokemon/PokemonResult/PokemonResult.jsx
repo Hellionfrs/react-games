@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import usePokemonSearch from "./usePokemonSearch.hook";
 import useAddFavorito from "./useAddFavotitos.hook";
 import { I18nContext } from "../../../locales/I18nContext"
+import Type from "../PokemonsFavoritos/Type";
 
 function PokemonResult({
   username,
@@ -76,19 +77,19 @@ function PokemonResult({
           <div className={styles.card}>
             <div className={styles.title}>
               <h1 className={styles.name}>{pokemon.name}</h1>
-              <span className={styles.id}>{pokemon.id}</span>
+              <span className={styles.id}>{`#${pokemon.id.toString().padStart(3, "0")}`}</span>
             </div>
-            <div>
+            <div >
               <img
                 className={styles.img}
                 src={pokemon.sprites.other.dream_world.front_default}
               />
             </div>
-            <div className={styles.type}>
+            <div className={styles["type-container"]}>
               {pokemon.types.map((type, key) => (
-                <span key={key} className={styles["type-pokemon"]}>
+                <Type type={type.type.name} key={key} className={styles["type-pokemon"]}>
                   {type.type.name}
-                </span>
+                </Type>
               ))}
             </div>
             <div className={styles.talla}>

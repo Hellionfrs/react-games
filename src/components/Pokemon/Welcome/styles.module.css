@@ -6,6 +6,7 @@
   gap: 32px;
   flex: 1 0 0;
   align-self: stretch;
+  margin-inline: auto;
 }
 
 .container-pokemon {

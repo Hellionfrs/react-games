@@ -9,8 +9,10 @@
   "username": "Nombre de Usuario",
   "There isn't pokemon": "No hay pokemon",
   "Add favorite": "Agregar pokemon",
-  "Remove pokemon":"Quitar pokemon",
+  "Remove pokemon":"Quitar de pokemon",
   "Search":"Buscar",
   "Favorites":"Favoritos",
-  "Exit":"Salir"
+  "Exit":"Salir",
+  "Reset":"Reiniciar",
+  "Go to": "Ir a"
 }

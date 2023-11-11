@@ -4,10 +4,10 @@ import styles from "./DisplayProject.module.css";
 import { ProjectContext } from "../../contexts/ProjectContext";
 import * as React from "react";
 function DisplayProject({ img, title, labels }) {
-  const {project, setProject} = React.useContext(ProjectContext)
+  const {setProject} = React.useContext(ProjectContext)
   function handleProject() {
     setProject(title)
-    console.log(project)
+    console.log(title)
   }
   return (
     <div className={styles.card} onClick={handleProject}>

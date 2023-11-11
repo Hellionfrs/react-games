@@ -10,7 +10,8 @@ function TicTacToe() {
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
   const { t } = useContext(I18nContext);
-  console.log(t);
+  // console.log(t);
+  console.log(currentMove)
   function handlePlay(nextSquares) {
     //TODO
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
@@ -47,6 +48,7 @@ function TicTacToe() {
           xIsNext={xIsNext}
           squares={currentSquares}
           onPlay={handlePlay}
+          move={currentMove}
         />
         <GameInfo moves={moves} handleReset={handleReset} />
       </section>

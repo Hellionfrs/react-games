@@ -1,10 +1,12 @@
+import { useContext, useState } from "react";
 import styles from "./styles.module.css";
 import peso from "../../../assets/peso.svg";
 import altura from "../../../assets/altura.svg";
 import estrella from "../../../assets/estrella.svg";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import usePokemonSearch from "./usePokemonSearch.hook";
 import useAddFavorito from "./useAddFavotitos.hook";
+import { I18nContext } from "../../../locales/I18nContext"
 
 function PokemonResult({
   username,
@@ -13,6 +15,7 @@ function PokemonResult({
   favoritos,
   selectedPokemonId,
 }) {
+  const { t } = useContext(I18nContext);
   const [pokemonName, setPokemonName] = useState("");
   const { pokemon, setIsSearching } = usePokemonSearch(pokemonName);
   const { result, addFavorito } = useAddFavorito(pokemon, username);
@@ -64,7 +67,7 @@ function PokemonResult({
           onChange={(e) => setPokemonName(e.target.value)}
         />
         <button className={styles.button} onClick={() => setIsSearching(true)}>
-          Search
+          {t("Search")}
         </button>
       </div>
 
@@ -124,7 +127,7 @@ function PokemonResult({
 
       {!pokemon && (
         <>
-          <h1>No hay pokemon</h1>
+          <h1>{t("There isn't pokemon")}</h1>
         </>
       )}
     </div>

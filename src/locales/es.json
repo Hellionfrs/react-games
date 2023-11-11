@@ -4,5 +4,13 @@
   "move": "Movimiento",
   "reset-button": "Reiniciar",
   "won-game": "Ganador",
-  "tied-game": "Juego Empatado"
+  "tied-game": "Juego Empatado",
+  "Enter": "Entrar",
+  "username": "Nombre de Usuario",
+  "There isn't pokemon": "No hay pokemon",
+  "Add favorite": "Agregar pokemon",
+  "Remove pokemon":"Quitar pokemon",
+  "Search":"Buscar",
+  "Favorites":"Favoritos",
+  "Exit":"Salir"
 }

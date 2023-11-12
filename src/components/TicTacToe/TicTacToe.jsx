@@ -11,7 +11,6 @@ function TicTacToe() {
     if (historyLocal) return JSON.parse(historyLocal)
     return [Array(9).fill(null)]
   });
-  console.log("history en reder",history);
   const [currentMove, setCurrentMove] = useState(() => {
     const moveLocal = localStorage.getItem("move")
     if (moveLocal) return JSON.parse(moveLocal)
@@ -20,14 +19,11 @@ function TicTacToe() {
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
   const { t } = useContext(I18nContext);
-  // console.log(t);
-  console.log(currentMove);
   function handlePlay(nextSquares) {
     //TODO
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
     setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);
-    // console.log("nextHistory",nextHistory)
     localStorage.setItem("history", JSON.stringify(nextHistory))
     localStorage.setItem("move", JSON.stringify(nextHistory.length - 1))
   }

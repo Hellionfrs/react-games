@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import styles from "./Pending.module.css";
-import { ProjectContext } from "../../contexts/ProjectContext";
 import { I18nContext } from "../../locales/I18nContext";
 function Pending({ project }) {
   const {t} = useContext(I18nContext)

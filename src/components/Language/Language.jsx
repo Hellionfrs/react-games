@@ -7,10 +7,8 @@ function Language({ id, src, alt }) {
   const isActive = language === id;
   let className = `${styles["img-container"]}`;
   function handleClick(e) {
-    console.log(e.currentTarget.id);
     setLanguage(e.currentTarget.id);
     className += ` ${styles.active}`;
-    console.log("click on language", className);
   }
 
   return (

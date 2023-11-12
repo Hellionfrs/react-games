@@ -8,7 +8,6 @@ export const I18nContext = createContext(null);
 
 export default function I18nProvider({ children }) {
   const [language, setLanguage] = useState("en");
-  console.log(language)
   function t(key) {
     return (locales[language][key] || key);
   }

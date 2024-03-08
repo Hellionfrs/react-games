@@ -3,14 +3,16 @@ import Labels from "../Labels";
 import styles from "./DisplayProject.module.css";
 import { ProjectContext } from "../../contexts/ProjectContext";
 import * as React from "react";
-function DisplayProject({ img, title, labels }) {
+import { Link } from "react-router-dom";
+function DisplayProject({project}) {
+  const {title, img, labels, endpoint} = project
   const {setProject} = React.useContext(ProjectContext)
   function handleProject() {
     setProject(title)
     console.log(title)
   }
   return (
-    <div className={styles.card} onClick={handleProject}>
+    <Link to={endpoint} className={styles.card} onClick={handleProject}>
       <div className={styles.head}>
         <img src={img} alt="" />
       </div>
@@ -20,7 +22,7 @@ function DisplayProject({ img, title, labels }) {
           {labels.map(label => <Labels key={label} name={label}/>)}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

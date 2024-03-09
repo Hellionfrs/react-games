@@ -7,6 +7,7 @@ import Main from "./components/Main";
 import TicTacToe from "./components/TicTacToe";
 import Pokemon from "./components/Pokemon";
 import Wordle from "./components/Wordle";
+import VideoFeed from "./components/Video-feed";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/video-feed",
-        element: <Wordle />
+        element: <VideoFeed />
       }
     ]
   },

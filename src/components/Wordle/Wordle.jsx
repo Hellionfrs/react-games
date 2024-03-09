@@ -3,7 +3,7 @@ import Pending from "../Pending/Pending";
 export default function Wordle() {
   return (
     <div>
-      <Pending />
+      <Pending project={"Wordle"}/>
     </div>
   );
 }

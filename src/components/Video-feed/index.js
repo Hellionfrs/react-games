@@ -1,2 +1,2 @@
-export { default } from "./Video-feed";
-export * from "./Video-feed";
+export { default } from "./VideoFeed";
+export * from "./VideoFeed";

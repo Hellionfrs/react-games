@@ -3,20 +3,20 @@ import spanish from "../../assets/spanish.png";
 import english from "../../assets/english.png";
 import Language from "../Language";
 import React from "react";
-import { ProjectContext } from "../../contexts/ProjectContext";
+import { Link, useLocation } from "react-router-dom";
 
 function Header() {
-  const { project, setProject } = React.useContext(ProjectContext);
-  function handleIndex() {
-    setProject(null);
-  }
+  let location = useLocation();
+  // console.log(location.pathname);
   return (
     <header className={styles.container}>
       <div className={styles.header}>
-        <h1 className={styles.title} onClick={handleIndex}>
+        <Link to="/" className={styles.title}>
           React Showcase
-        </h1>
-        {project && <span className={styles.project}>{project}</span>}
+        </Link>
+        {location.pathname !== "/" ? (
+          <span className={styles.project}>{location.pathname}</span>
+        ) : null}
         <div className={styles["language-container"]}>
           <Language id="es" src={spanish} alt="spanish" />
           <Language id="en" src={english} alt="english" />

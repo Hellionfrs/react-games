@@ -13,11 +13,13 @@
 }
 
 .title {
+  color: black;
   font-family: var(--nunito);
   font-size: 2.25rem;
   font-style: normal;
   font-weight: 700;
   line-height: 2.5rem;
+  text-decoration: none;
 }
 
 .language-container {
@@ -32,9 +34,9 @@
 .project {
   padding: 0.5rem 1rem;
   border-radius: 1.25rem;
-  border: 1px solid #1D58D8; 
-  
-  color: #1D58D8;
+  border: 1px solid #1d58d8;
+
+  color: #1d58d8;
   font-family: var(--nunito);
   font-size: 1.5rem;
   font-style: normal;

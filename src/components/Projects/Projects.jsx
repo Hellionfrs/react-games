@@ -8,27 +8,11 @@ function Project() {
       <div className={styles.wrapper}>
         {projects.map((project) => {
           return (
-            <DisplayProject
+            <DisplayProject key={project.title}
               project={project}
             />
           );
         })}
-        
-        {/* <DisplayProject
-          img={pokeapi}
-          title={"Poke Collection"}
-          labels={["useState", "useContext", "useEffect", "otherFeature"]}
-        />
-        <DisplayProject
-          img={wordle}
-          title={"React Wordle"}
-          labels={["useState", "useContext", "useEffect", "otherFeature"]}
-        />
-        <DisplayProject
-          img={youtube}
-          title={"Video Feed"}
-          labels={["useState", "useContext", "useEffect", "otherFeature"]}
-        /> */}
       </div>
     </section>
   );

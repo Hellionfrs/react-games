@@ -1,25 +1,21 @@
 /* eslint-disable react/prop-types */
 import Labels from "../Labels";
 import styles from "./DisplayProject.module.css";
-import { ProjectContext } from "../../contexts/ProjectContext";
 import * as React from "react";
 import { Link } from "react-router-dom";
-function DisplayProject({project}) {
-  const {title, img, labels, endpoint} = project
-  const {setProject} = React.useContext(ProjectContext)
-  function handleProject() {
-    setProject(title)
-    console.log(title)
-  }
+function DisplayProject({ project }) {
+  const { title, img, labels, endpoint } = project;
   return (
-    <Link to={endpoint} className={styles.card} onClick={handleProject}>
+    <Link to={endpoint} className={styles.card} key={title}>
       <div className={styles.head}>
         <img src={img} alt="" />
       </div>
       <div className={styles.body}>
         <h1>{title}</h1>
         <div className={styles["labels-container"]}>
-          {labels.map(label => <Labels key={label} name={label}/>)}
+          {labels.map((label) => (
+            <Labels key={label} name={label} />
+          ))}
         </div>
       </div>
     </Link>

@@ -8,8 +8,8 @@
   align-items: center;
   padding-inline: 1rem;
   margin-inline: auto;
-  max-width: 80rem;
-  height: 4rem;
+  /* max-width: 80rem; */
+  /* height: 4rem; */
 }
 
 .title {
@@ -20,12 +20,13 @@
   font-weight: 700;
   line-height: 2.5rem;
   text-decoration: none;
+  /* padding: 1rem; */
 }
 
 .language-container {
   display: flex;
   gap: 0.25rem;
-  min-width: 17.0625rem;
+  /* min-width: 17.0625rem; */
   justify-content: flex-end;
   /* justify-content: center; */
   align-items: center;
@@ -42,4 +43,10 @@
   font-style: normal;
   font-weight: 700;
   line-height: 1.5rem; /* 100% */
+}
+
+@media (max-width: 400px) {
+  .language-container {
+    flex-direction: column;
+  }
 }

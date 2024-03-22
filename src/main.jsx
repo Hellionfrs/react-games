@@ -16,29 +16,27 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Main />
+        element: <Main />,
       },
       {
         path: "/tictactoe",
-        element: <TicTacToe />
+        element: <TicTacToe />,
       },
       {
         path: "/pokeapi",
-        element: <Pokemon />
+        element: <Pokemon />,
       },
       {
         path: "/wordle-clone",
-        element: <Wordle />
+        element: <Wordle />,
       },
       {
         path: "/video-feed",
-        element: <VideoFeed />
-      }
-    ]
+        element: <VideoFeed />,
+      },
+    ],
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <RouterProvider router={router} />
 );

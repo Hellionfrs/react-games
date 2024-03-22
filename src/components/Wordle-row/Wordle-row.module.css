@@ -1,0 +1,21 @@
+.row-container {
+  display: flex;
+  gap: 0.25rem;
+}
+.row-container span {
+  display: flex;
+  border: 1px solid #cbd5e1;
+  padding: 0.5rem;
+  border-radius: 10%;
+  width: 5.625rem;
+  height: 5.625rem;
+  align-items: center;
+  justify-content: center;
+  font-family: Nunito;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3rem;
+
+  text-transform: uppercase;
+}

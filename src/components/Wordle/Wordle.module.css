@@ -30,6 +30,7 @@
   display: flex;
   gap: 0.25rem;
 }
+
 .row-container span {
   display: flex;
   border: 1px solid #cbd5e1;
@@ -60,10 +61,12 @@
   font-weight: 400;
   line-height: 1.5rem; /* 150% */
 }
+
 .form-input-section {
   display: flex;
   gap: 0.25rem;
 }
+
 .form-input-section input {
   border-radius: 0.25rem;
   border: 1px solid #334155;
@@ -77,6 +80,7 @@
   font-weight: 400;
   line-height: 2rem; /* 133.333% */
   letter-spacing: 0.075rem;
+  text-transform: uppercase;
 }
 .button {
   display: flex;
@@ -93,4 +97,15 @@
   font-weight: 700;
   line-height: 24px; /* 150% */
   justify-content: center;
+  transition: all 250ms;
+}
+
+.button:hover {
+  background: #2064f5;
+  scale: 1.05;
+}
+
+.button:disabled {
+  opacity: 60%;
+  scale: 0.95;
 }

@@ -5,6 +5,7 @@
 .row-container span {
   display: flex;
   border: 1px solid #cbd5e1;
+  color: #ffffff;
   padding: 0.5rem;
   border-radius: 10%;
   width: 5.625rem;

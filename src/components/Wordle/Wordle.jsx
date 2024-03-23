@@ -31,7 +31,7 @@ export default function Wordle() {
       return;
     }
     const formData = new FormData(event.target);
-    const currentInput = formData.get("word-input");
+    const currentInput = formData.get("word-input").toUpperCase();
     if (regex.test(currentInput)) {
       // assign row and word to []
       let cRow = currentRow;

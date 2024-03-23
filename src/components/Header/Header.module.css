@@ -8,7 +8,7 @@
   align-items: center;
   padding-inline: 1rem;
   margin-inline: auto;
-  /* max-width: 80rem; */
+  max-width: 80rem;
   /* height: 4rem; */
 }
 
@@ -26,7 +26,7 @@
 .language-container {
   display: flex;
   gap: 0.25rem;
-  /* min-width: 17.0625rem; */
+  
   justify-content: flex-end;
   /* justify-content: center; */
   align-items: center;
@@ -45,8 +45,12 @@
   line-height: 1.5rem; /* 100% */
 }
 
-@media (max-width: 400px) {
+@media (max-width: 425px) {
   .language-container {
     flex-direction: column;
   }
+  .title {
+    font-size: 1.5rem;
+  }
 }
+

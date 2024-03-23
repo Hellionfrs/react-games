@@ -51,11 +51,11 @@ export default function Wordle() {
     <section className={s.box}>
       <div className={s.container}>
         <aside>
-          <WordleRow key={1} row={1} word={word} />
-          <WordleRow key={2} row={2} word={word} />
-          <WordleRow key={3} row={3} word={word} />
-          <WordleRow key={4} row={4} word={word} />
-          <WordleRow key={5} row={5} word={word} />
+          <WordleRow key={1} row={1} word={word} answer={wordAnswer}/>
+          <WordleRow key={2} row={2} word={word} answer={wordAnswer}/>
+          <WordleRow key={3} row={3} word={word} answer={wordAnswer}/>
+          <WordleRow key={4} row={4} word={word} answer={wordAnswer}/>
+          <WordleRow key={5} row={5} word={word} answer={wordAnswer}/>
         </aside>
         <form onSubmit={sendWord} className={s["form-container"]}>
           <label htmlFor="word-input">Enter your guess</label>

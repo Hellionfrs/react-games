@@ -19,3 +19,31 @@
 
   text-transform: uppercase;
 }
+
+.includes {
+  background: #CA8A04 !important; 
+}
+
+.clutch {
+  background: #047857 !important ; 
+}
+
+.default {
+  background: #64748B;
+}
+
+@media (max-width: 575px) {
+  .row-container span {
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .row-container span {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 2rem;
+  }
+}
